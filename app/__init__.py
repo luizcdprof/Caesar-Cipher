@@ -10,6 +10,6 @@ def create_app():
 
     @app.route("/encode")
     def encode(name='Encode'):
-        return render_template('encode.html', name=name)
+        return render_template('encode.html', encodedmessage="MESSAGE", name=name)
     
     return app

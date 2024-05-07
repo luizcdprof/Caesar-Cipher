@@ -17,4 +17,4 @@ def test_encode_XYZ():
 
 def test_encode_ABCD_negative():
     encoded_message = encode("XYZ", -2)
-    assert encoded_message == "ZABD"
+    assert encoded_message == "ZAB"

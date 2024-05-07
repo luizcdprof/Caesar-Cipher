@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Caesar's Cipher</title>
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        <h1>Caesar's Cipher</h1>
-        <a href="{{ url_for('encode') }}">Encode</a>
-    </body>
-</html>
+{% block content %}
+    <img src="{{ url_for('static', filename='images/logo.png') }}">
+    <a href="{{ url_for('encode') }}">Encode</a>
+{% endblock %}
