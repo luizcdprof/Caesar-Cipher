@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
+    <div class="info">
+        Em criptografia, a Cifra de César é uma das mais simples e conhecidas técnicas de criptografia.<br />
+        É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra com base em uma chave.<br />
+        Exemplo: com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante.<br />O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.
+    </div>
+
+    <div class="cipher-container">
+        <a href="/encode">
+            <div class="cipher-container-item">
+                <img class="cipher-image" src="{{ url_for('static', filename='images/lock.png') }}">
+            </div>
+        </a>
+
+        <a href="/decode"></a>
+    </div>
 {% endblock %}

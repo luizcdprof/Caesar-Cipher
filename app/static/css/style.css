@@ -1,5 +1,46 @@
+:root {
+    --color-primary: #890504;
+    --color-primary-hover: #FF0000;
+    --color-primary-dark: #990100;
+
+    --color-text: #FFF0F3;
+    --color-background: #220901;
+}
+
 body {
-    background: black;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: Ubuntu;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.info {
+    text-align: center;
+}
+
+.cipher-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+}
+
+.cipher-container-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--color-text);
+}
+
+.cipher-image {
+    height: 150px;
+    width: 150px;
 }
 
 .header-container {
