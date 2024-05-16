@@ -15,6 +15,13 @@ body {
     line-height: 1.5;
 }
 
+.alert {
+    font-size: 1rem;
+    padding: 2px;
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
+}
+
 .info {
     text-align: center;
 }

@@ -11,8 +11,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <span class="flash-message">
+            {% for message in get_flashed_messages() %}
+                <div class="alert">{{ message }}</div>
+            {% endfor %}
+        </span>
+
         <header class="header-container">
-            <img class="header-logo" src="{{ url_for('static', filename='images/logo.png') }}">
+            <img class="header-logo" src="{{ url_for('static', filename='images/logo.png') }}" />
         </header>
         
         <main>
