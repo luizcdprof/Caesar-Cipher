@@ -12,7 +12,9 @@ def create_app():
 
     @app.route('/encode', methods=('GET', 'POST'))
     def encode(name='Encode'):
-        if request.method == 'POST':
+        encoded_message = ''
+
+        if request.method == 'POST':            
             try:
                 cipher_key = int(request.form['cipher_key'])
             except:
@@ -28,8 +30,7 @@ def create_app():
                 flash('A mensagem é necessária...')
             else:
                 encoded_message = encode_message(message, int(cipher_key))
-                flash(encoded_message)
 
-        return render_template('encode.html',name=name)
+        return render_template('encode.html', encoded_message=encoded_message)
     
     return app

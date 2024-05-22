@@ -3,7 +3,7 @@
 {% block content %}
     <div class="cipher-encode-decode-container">
         <div class="cipher-title">
-            Codificar Mensagem
+            <h2>Codificar Mensagem</h2>
         </div>
 
         <div class="cipher-description">
@@ -39,6 +39,10 @@
                     CODIFICAR A MENSAGEM
                 </button>
             </form>
+        </div>
+
+        <div class="encoded-message-container">
+            {{ encoded_message }}
         </div>
     </div>
 {% endblock %}

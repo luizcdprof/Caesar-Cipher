@@ -59,3 +59,16 @@ body {
 .header-logo {
     height: 150px;
 }
+
+button {
+    background: var(--color-primary-dark);
+    color: var(--color-text);
+    height: 3rem;
+    width: 20rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--color-primary-dark);
+    border-width: 2px;
+}
