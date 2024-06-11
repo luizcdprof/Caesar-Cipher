@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, flash
 from app.encode import encode_message
+from app.decode import decode_message
 
 def create_app():
     #Create and configure the app
@@ -31,5 +32,27 @@ def create_app():
                 flash(encoded_message)
 
         return render_template('encode.html',name=name)
+    
+    @app.route('/decode', methods=('GET', 'POST'))
+    def decode(name='Decode'):
+        if request.method == 'POST':
+            try:
+                cipher_key = int(request.form['cipher_key'])
+            except:
+                cipher_key = 0
+            
+            message = request.form['message']
+
+            if cipher_key == 0:
+                flash("A chave deve ser um número!")
+            elif not cipher_key:
+                flash('A chave é obrigatória...')
+            elif not message :
+                flash('A mensagem é necessária...')
+            else:
+                decoded_message = decode_message(message, int(cipher_key))
+                flash(decoded_message)
+
+        return render_template('decode.html',name=name)
     
     return app

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="cipher-encode-decode-container">
+        <div class="cipher-title">
+            Decodificar Mensagem
+        </div>
+
+        <div class="cipher-description">
+            Para decodificar sua mensagem, informe a chave e a mensagem a ser decodificada.
+        </div>
+
+        <div class="cipher-content">
+            <form method="post">
+                <label for="Chave">
+                    Chave:
+                </label>
+                <input
+                    type="text"
+                    name="cipher_key"
+                    id="cipher_key"
+                    placeholder="de 1 a 25"
+                >
+                <br />
+                <label for="message">
+                    Mensagem para decodificar:
+                </label>
+                <br />
+                <textarea
+                    name="message"
+                    id="message"
+                    cols="60"
+                    rows="5"
+                    placeholder="Digite sua mensagem aqui..."
+                ></textarea>
+                <br />
+
+                <button type="submit">
+                    DECODIFICAR A MENSAGEM
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
